@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="bkp.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css">
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <h2 class="logo">Portfol<span>io</span> </h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Acheievement</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact Me</a></li>
+            </ul>
+            <a href="https://drive.google.com/file/d/1z0ROr0wAL1Z0vFRKteo3S6SqZFFNecW8/view?usp=sharing" class="btn" download>Resume</a>
+            <button class="btn1" type="button1" id="darken" onclick="toggledark()"><span></span></button>
+            
+        </nav>
+        <div class="content">
+            <h4>Hello There, It's</h4>
+            <h1>Mayur Kawale</h1><hr>
+            <h3>I'am a Front End <span>Web Developer.</span></h3>
+            <div class="newslatter">
+                <form>
+                    <input type="email" name="email" id="mail" placeholder="Enter Your Email">
+                    <input type="submit" name="submit" value="G0">
+                    
+                </form>
+            </div>
+            <div class="search-box">
+                <input class="search-text" type="text" name="" placeholder="Type To Search">
+                <a class="search-btn" href="#">GO</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="about">
+        <h2 class="ab">About Me</h2><hr>
+        <div class="aw">
+        <ul>
+            <li>Developer And <span>Programmer</span><hr></li>
+            <li>Competitive <span>Coder</span><hr></li>
+        </ul>
+        </div>
+        <div class="as">
+            <ul>
+                <li>Lorem ipsum dolor sit, amet consectetur <br>
+                     adipisicing elit. Nihil, mollitia excepturi. <br>
+                     Dolorem ipsum commodi est blanditiis inventore<br>
+                      deserunt accusantium odit veritatis maxime amet.
+                </li>
+                <li>Lorem ipsum dolor sit, amet consectetur <br>
+                    adipisicing elit. Nihil, mollitia excepturi. <br>
+                    Dolorem ipsum commodi est blanditiis inventore<br>
+                     deserunt accusantium odit veritatis maxime amet.
+               </li>
+            </ul>
+        </div>
+        <div class="wa">
+            <ul>
+                <li>Blockchain <span>Developer</span><hr width="330px" style="margin-left: 760px;"></li>
+            </ul>
+        </div>
+        <div class="re">
+            <ul>
+                <li>Lorem ipsum dolor sit, amet consectetur <br>
+                    adipisicing elit. Nihil, mollitia excepturi. <br>
+                    Dolorem ipsum commodi est blanditiis inventore repellendus <br>
+                     deserunt accusantium odit veritatis maxime amet.
+               </li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="service">
+        <div class="title">
+            <h2>Our Service</h2>
+        </div>
+        <div class="box">
+            <div class="card">
+                <i class="fa-solid fa-bars"></i>
+                <h5>Web Development</h5>
+                <div class="pra">
+                    <p>Lorem ipsum dolor sit amet consectetur
+                         adipisicing elit. Facere, facilis? Lorem 
+                         ipsum dolor sit amet consectetur, adipisicing elit.
+                          Nesciunt, ex. Lorem ipsum dolor sit amet
+                           consectetur, adipisicing elit. Doloribus, sint?
+                    </p>
+                    <p style="text-align: center;">
+                    <a class="button" href="#">Read More</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <i class="fa-regular fa-user"></i>
+                <h5>Blockchain Development</h5>
+                <div class="pra">
+                    <p>Lorem ipsum dolor sit amet consectetur
+                         adipisicing elit. Facere, facilis? Lorem 
+                         ipsum dolor sit amet consectetur, adipisicing elit.
+                          Nesciunt, ex. Lorem ipsum dolor sit amet
+                           consectetur, adipisicing elit. Doloribus, sint?
+                    </p>
+                    <p style="text-align: center;">
+                    <a class="button" href="#">Read More</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <i class="fa-regular fa-bell"></i>
+                <h5>Flutter Development</h5>
+                <div class="pra">
+                    <p>Lorem ipsum dolor sit amet consectetur
+                         adipisicing elit. Facere, facilis? Lorem 
+                         ipsum dolor sit amet consectetur, adipisicing elit.
+                          Nesciunt, ex. Lorem ipsum dolor sit amet
+                           consectetur, adipisicing elit. Doloribus, sint?
+                    </p>
+                    <p style="text-align: center;">
+                    <a class="button" href="#">Read More</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-me">
+        <p>Impressed With My Portfolio Website !</p>
+        <a class="button-two" href="#">Hire Me</a>
+    </div>
+
+
+    <script>
+        var darken = document.getElementById("darken")
+
+        if(localStorage.getItem("theme") == null){
+            localStorage.getItem("theme","light");
+        }
+        
+        let localData = localStorage.getItem("theme");
+        if(localData=="light"){
+            document.body.classList.remove("dark");
+        }
+        else if(localData=="dark"){
+            darken.classList.toggle("active");
+            document.body.classList.add("dark");
+        }
+
+
+        darken.onclick=function(){
+            document.body.classList.toggle("dark");
+        
+        if(document.body.classList.contains("dark")){
+            darken.classList.toggle("active");
+            localStorage.setItem("theme","dark")
+        }
+        else{
+            darken.classList.toggle("active");
+            localStorage.setItem("theme","light")
+        }
+    }
+    
+    </script>
+</body>
+</html>
